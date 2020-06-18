@@ -15,6 +15,12 @@ const routes = [
         component: resolve => {
           require(['@/views/index.vue'], resolve)
         }
+      },
+      {
+        path: 'components',
+        component: resolve => {
+          require(['@/views/components/index.vue'], resolve)
+        }
       }
     ]
   },

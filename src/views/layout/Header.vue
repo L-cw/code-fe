@@ -1,7 +1,7 @@
 <!--
  * @Author: Leo
  * @Date: 2020-06-16 23:51:02
- * @LastEditTime: 2020-06-17 01:40:38
+ * @LastEditTime: 2020-06-19 00:42:59
  * @LastEditors: Leo
  * @Description: In User Settings Edit
  * @FilePath: \code-fe\src\views\layout\Header.vue
@@ -62,6 +62,7 @@ export default {
     right: 0;
     height: $header-height;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    z-index: $header-zindex;
     .header-cont {
       display: flex;
       justify-content: space-between;
@@ -91,9 +92,14 @@ export default {
             background-color: $theme-color;
             transition: width .3s;
           }
+          &.router-link-exact-active {
+            color: $theme-color;
+            &:after {
+              width: 100%;
+            }
+          }
         }
-        &:hover,
-        &.active {
+        &:hover {
           .nav {
             color: $theme-color;
             &:after {
