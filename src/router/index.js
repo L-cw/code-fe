@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { componentsRoutes } from './modules/components'
 
 Vue.use(VueRouter)
 
@@ -16,12 +17,7 @@ const routes = [
           require(['@/views/index.vue'], resolve)
         }
       },
-      {
-        path: 'components',
-        component: resolve => {
-          require(['@/views/components/index.vue'], resolve)
-        }
-      }
+      ...componentsRoutes
     ]
   },
   {

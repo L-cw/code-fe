@@ -2,7 +2,7 @@
  * @Date: 2020-06-17 01:41:24
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-19 00:46:26
+ * @LastEditTime: 2020-06-20 03:56:04
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\index.vue
 --> 
@@ -26,6 +26,10 @@
             </el-submenu>
           </el-submenu>
         </el-menu>
+      </el-col>
+      <el-col :span="20">
+        <router-link to="/components/odometer">数字动效</router-link>
+        <router-link to="/components/seal">公章</router-link>
       </el-col>
     </el-row>
   </div>
