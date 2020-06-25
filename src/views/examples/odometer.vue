@@ -2,21 +2,17 @@
  * @Date: 2020-06-20 03:47:46
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-20 03:48:52
+ * @LastEditTime: 2020-06-21 12:11:02
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\odometer.vue
 --> 
 <template>
   <div class="components-odometer-page">
-    <div class="temp-text">
+    <div class="display-text">
       <odometer :num="num1" class="num" class-name="num1" />
-      <odometer :num="num2" class="num" class-name="num2" />
-      <odometer :num="num3" class="num" class-name="num3" />
-      <odometer :num="num4" class="num" class-name="num4" />
-      <odometer :num="num5" class="num" class-name="num5" />
     </div>
-    <div class="temp-text">
-      <el-button @click="handleClick">Click to add 132</el-button>
+    <div class="settings-box">
+      <el-button @click="handleClick">Click to add 18</el-button>
     </div>
   </div>
 </template>
@@ -28,11 +24,7 @@ export default {
   components: { Odometer },
   data () {
     return {
-      num1: 121,
-      num2: 122,
-      num3: 123,
-      num4: 124,
-      num5: 125
+      num1: 121
     }
   },
   mounted () {
@@ -41,10 +33,6 @@ export default {
   methods: {
     handleClick () {
       this.num1 += 18
-      this.num2 += 17
-      this.num3 += 14
-      this.num4 += 13
-      this.num5 += 17
     }
   }
 }
@@ -52,13 +40,11 @@ export default {
 
 <style lang="scss" scoped>
   .components-odometer-page {
-    & .temp-text {
-      font-size: 20px;
+    & .display-text {
+      font-size: 40px;
       font-weight: 600;
       color: #00d080;
-      .num {
-        margin-right: 20px;
-      }
+      margin-bottom: 20px;
     }
   }
 </style>

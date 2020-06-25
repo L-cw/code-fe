@@ -1,7 +1,7 @@
 <!--
  * @Author: Leo
  * @Date: 2020-06-16 23:51:02
- * @LastEditTime: 2020-06-19 00:42:59
+ * @LastEditTime: 2020-06-25 22:41:09
  * @LastEditors: Leo
  * @Description: In User Settings Edit
  * @FilePath: \code-fe\src\views\layout\Header.vue
@@ -15,7 +15,10 @@
           <router-link to="/" tag="div" class="nav">首页</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/components" tag="div" class="nav">组件</router-link>
+          <router-link to="/examples" tag="div" class="nav">组件</router-link>
+        </div>
+        <div class="nav-item">
+          <router-link to="/tools" tag="div" class="nav">工具</router-link>
         </div>
         <div class="nav-item">
           <div class="nav">
@@ -65,6 +68,7 @@ export default {
     z-index: $header-zindex;
     .header-cont {
       display: flex;
+      padding-right: 60px;
       justify-content: space-between;
     }
     .nav-list {

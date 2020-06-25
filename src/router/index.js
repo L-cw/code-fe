@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { componentsRoutes } from './modules/components'
+import { examplesRoutes } from './modules/components'
+import { toolsRoutes } from './modules/tools'
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,10 @@ const routes = [
           require(['@/views/index.vue'], resolve)
         }
       },
-      ...componentsRoutes
+
+      ...examplesRoutes,
+
+      ...toolsRoutes
     ]
   },
   {
