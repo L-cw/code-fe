@@ -11,14 +11,25 @@
             size="mini"
             show-alpha
             :predefine="predefineColors"
+            @change="handleColorChange"
           />
         </el-col>
         <el-col :span="18" class="flex-center-all">
           <div class="setting-label">输出尺寸</div>
-          <el-input v-model="sizeWith" placeholder="宽">
+          <el-input
+            v-model="sizeWith"
+            placeholder="宽"
+            disabled
+            @input="handleWidthChange"
+          >
             <template slot="append">px</template>
           </el-input>
-          <el-input v-model="sizeHeight" placeholder="高">
+          <el-input
+            v-model="sizeHeight"
+            placeholder="高"
+            disabled
+            @input="handleHeightChange"
+          >
             <template slot="append">px</template>
           </el-input>
         </el-col>
@@ -33,7 +44,12 @@
     </div>
 
     <div class="display-box">
-      <canvas id="js_solid-color" width="" />
+      <div class="display-box-title">预览：</div>
+      <canvas id="js_solid-color-canvas" />
+    </div>
+
+    <div class="download-box">
+      <a :href="imgBase64" download="纯色图片" class="download-btn">点击下载</a>
     </div>
   </div>
 </template>
@@ -63,14 +79,37 @@ export default {
       sizeWith: '720',
       sizeHeight: '360',
       borderRadius: '0',
+      imgBase64: '',
       transparentFlag: false
     }
   },
   mounted () {
-
+    this.draw()
   },
   methods: {
+    draw () {
+      const canvas = document.getElementById('js_solid-color-canvas')
+      const ctx = canvas.getContext('2d')
 
+      canvas.width = this.sizeWith
+      canvas.height = this.sizeHeight
+      ctx.rect(0, 0, this.sizeWith, this.sizeHeight);
+      ctx.fillStyle = this.color
+      ctx.fill()
+
+      this.imgBase64 = canvas.toDataURL('image/png')
+
+    },
+
+    handleColorChange () {
+      this.draw()
+    },
+    handleWidthChange (e) {
+      console.log(e)
+    },
+    handleHeightChange (e) {
+      console.log(e)
+    }
   }
 }
 </script>
@@ -81,6 +120,53 @@ export default {
       .setting-label {
         flex-shrink: 0;
         margin-right: 10px;
+      }
+    }
+
+    .display-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      .display-box-title {
+        font-size: 16px;
+        width: 100%;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+
+    .download-box {
+      display: flex;
+      justify-content: center;
+      .download-btn {
+        position: relative;
+        display: block;
+        padding: 0 14px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        &:hover {
+          border: 1px solid $theme-color;
+          color: #fff;
+          &:after {
+            width: 100%;
+          }
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 36px;
+          border-radius: 6px;
+          z-index: -1;
+          background-color: $theme-color;
+          transition: width .3s;
+        }
       }
     }
   }

@@ -2,13 +2,13 @@
  * @Date: 2020-06-20 03:47:37
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-20 04:14:36
+ * @LastEditTime: 2020-08-01 00:19:45
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\seal.vue
 --> 
 <template>
   <div>
-    <seal ref="seal" id="seal-demo" :company="company" />
+    <seal ref="seal" id="js_seal-demo" :company="company" />
     <div class="ipt-box">
       <el-input v-model="company" />
       <el-button type="primary" class="generate-btn" @click="handleRefreshSeal">生成</el-button>

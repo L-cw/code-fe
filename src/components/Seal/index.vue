@@ -2,7 +2,7 @@
  * @Date: 2020-06-20 01:22:31
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-20 04:31:08
+ * @LastEditTime: 2020-08-01 00:28:00
  * @Description: Do not edit
  * @FilePath: \code-fe\src\components\Seal\index.vue
 --> 
@@ -50,9 +50,10 @@ export default {
       company = this.company,
       sealSymbol = this.sealSymbol
     ) {
+      console.log(id, company, sealSymbol)
       canvas || (canvas = document.getElementById(id))
-      console.log(company)
       context || (context = canvas.getContext("2d"))
+      context.moveTo(0, 0);
       context.clearRect(0, 0, canvas.width, canvas.height)
 
       // 绘制印章边框
@@ -93,33 +94,32 @@ export default {
         context.restore();
       }
 
-
-      },
-      //绘制五角星
-      /**
-       * 创建一个五角星形状. 该五角星的中心坐标为(sx,sy),中心到顶点的距离为radius,rotate=0时一个顶点在对称轴上
-       * rotate:绕对称轴旋转rotate弧度
-       */
-      create5star(context, sx, sy, radius, color, rotato) {
-        context.save();
-        context.fillStyle = color;
-        context.translate(sx, sy); //移动坐标原点
-        context.rotate(Math.PI + rotato); //旋转
-        context.beginPath(); //创建路径
-        var x = Math.sin(0);
-        var y = Math.cos(0);
-        var dig = (Math.PI / 5) * 4;
-        for (var i = 0; i < 5; i++) {
-          //画五角星的五条边
-          var x = Math.sin(i * dig);
-          var y = Math.cos(i * dig);
-          context.lineTo(x * radius, y * radius);
-        }
-        context.closePath();
-        context.stroke();
-        context.fill();
-        context.restore();
+    },
+    //绘制五角星
+    /**
+     * 创建一个五角星形状. 该五角星的中心坐标为(sx,sy),中心到顶点的距离为radius,rotate=0时一个顶点在对称轴上
+     * rotate:绕对称轴旋转rotate弧度
+     */
+    create5star(context, sx, sy, radius, color, rotato) {
+      context.save();
+      context.fillStyle = color;
+      context.translate(sx, sy); //移动坐标原点
+      context.rotate(Math.PI + rotato); //旋转
+      context.beginPath(); //创建路径
+      var x = Math.sin(0);
+      var y = Math.cos(0);
+      var dig = (Math.PI / 5) * 4;
+      for (var i = 0; i < 5; i++) {
+        //画五角星的五条边
+        var x = Math.sin(i * dig);
+        var y = Math.cos(i * dig);
+        context.lineTo(x * radius, y * radius);
       }
+      context.closePath();
+      context.stroke();
+      context.fill();
+      context.restore();
+    }
   }
 };
 </script>

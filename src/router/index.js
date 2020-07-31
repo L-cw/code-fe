@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { examplesRoutes } from './modules/components'
+import { componentsRoutes } from './modules/components'
 import { toolsRoutes } from './modules/tools'
 
 Vue.use(VueRouter)
@@ -19,7 +19,7 @@ const routes = [
         }
       },
 
-      ...examplesRoutes,
+      ...componentsRoutes,
 
       ...toolsRoutes
     ]

@@ -1,26 +1,32 @@
-export const examplesRoutes = [
+export const componentsRoutes = [
   {
-    path: 'examples',
+    path: 'components',
     component: resolve => {
-      require(['@/views/examples/layout.vue'], resolve)
+      require(['@/views/components/layout.vue'], resolve)
     },
     children: [
       {
         path: '',
         component: resolve => {
-          require(['@/views/examples/index.vue'], resolve)
+          require(['@/views/components/index.vue'], resolve)
         }
       },
       {
         path: 'odometer',
         component: resolve => {
-          require(['@/views/examples/odometer.vue'], resolve)
+          require(['@/views/components/odometer.vue'], resolve)
         }
       },
       {
         path: 'seal',
         component: resolve => {
-          require(['@/views/examples/seal.vue'], resolve)
+          require(['@/views/components/seal.vue'], resolve)
+        }
+      },
+      {
+        path: 'code-block',
+        component: resolve => {
+          require(['@/views/components/codeBlock.vue'], resolve)
         }
       }
     ]

@@ -2,7 +2,7 @@
  * @Date: 2020-06-20 03:47:46
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-21 12:11:02
+ * @LastEditTime: 2020-07-31 23:32:56
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\odometer.vue
 --> 
@@ -40,6 +40,11 @@ export default {
 
 <style lang="scss" scoped>
   .components-odometer-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
     & .display-text {
       font-size: 40px;
       font-weight: 600;
