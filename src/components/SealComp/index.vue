@@ -1,8 +1,8 @@
 <!--
  * @Date: 2020-06-20 01:22:31
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2020-08-01 00:28:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-08-03 14:42:34
  * @Description: Do not edit
  * @FilePath: \code-fe\src\components\Seal\index.vue
 --> 
@@ -13,7 +13,7 @@
 <script>
 let canvas, context
 export default {
-  name: "",
+  name: "SealComp",
   props: {
     id: {
       type: String,

@@ -43,7 +43,7 @@
 }
 .page-cont {
   min-height: calc(100vh - #{$footer-height});
-  padding-top: $header-height;
+  padding-top: calc(#{$header-height} + 20px);
 }
 .page-title {
   font-size: 18px;

@@ -1,14 +1,14 @@
 <!--
  * @Date: 2020-06-20 03:47:37
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2020-08-01 00:19:45
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-08-03 15:30:15
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\seal.vue
 --> 
 <template>
-  <div>
-    <seal ref="seal" id="js_seal-demo" :company="company" />
+  <div class="seal-page">
+    <seal-comp ref="seal" id="js_seal-demo" :company="company" />
     <div class="ipt-box">
       <el-input v-model="company" />
       <el-button type="primary" class="generate-btn" @click="handleRefreshSeal">生成</el-button>
@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import Seal from '@/components/Seal'
+import SealComp from '@/components/SealComp'
 export default {
-  components: { Seal },
-  name: '',
+  components: { SealComp },
+  name: 'Seal',
   data () {
     return {
       company: '国家顶级节点·广州'
@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.seal-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .ipt-box {
     width: 400px;
     display: flex;
@@ -51,4 +55,5 @@ export default {
       margin-top: 20px;
     }
   }
+}
 </style>

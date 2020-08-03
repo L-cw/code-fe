@@ -6,9 +6,6 @@
       <div class="img-cont">
         <img src="../assets/images/not-found.png">
       </div>
-      <div class="miss-title">
-        404
-      </div>
       <div class="miss-tips">
         Page not found! don't worry,sometimes it happens even for the best of us.
       </div>
@@ -55,8 +52,8 @@ export default {
     margin: 100px auto 0px;
     text-align: center;
     & .img-cont{
-      height: 238px;
-      width: 386px;
+      width: 410px;
+      height: 300px;
       margin: 0 auto;
       &>img{
         width: 100%;
@@ -78,7 +75,7 @@ export default {
       height: 40px;
       font-size: 16px;
       color: #fff;
-      background: #Ff6c00;
+      background: $theme-color;
       text-align: center;
       line-height: 40px;
       border-radius: 5px;

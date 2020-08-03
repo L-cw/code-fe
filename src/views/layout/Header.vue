@@ -1,15 +1,18 @@
 <!--
  * @Author: Leo
  * @Date: 2020-06-16 23:51:02
- * @LastEditTime: 2020-07-31 23:27:15
- * @LastEditors: Leo
+ * @LastEditTime: 2020-08-03 15:18:05
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \code-fe\src\views\layout\Header.vue
 --> 
 <template>
   <header class="header">
     <div class="content header-cont">
-      <div class="header-lf"></div>
+      <div class="logo-box">
+        <img src="/static/images/logo.png" alt="" class="logo">
+        <div class="logo-text">Leo的前端实验室</div>
+      </div>
       <nav class="nav-list">
         <div class="nav-item active">
           <router-link to="/" tag="div" class="nav">首页</router-link>
@@ -70,6 +73,20 @@ export default {
       display: flex;
       padding-right: 60px;
       justify-content: space-between;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      color: $ft-color-title;
+      .logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+      .logo-text {
+        font-size: 18px;
+        font-weight: 500;
+      }
     }
     .nav-list {
       display: flex;

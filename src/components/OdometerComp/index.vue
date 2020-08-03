@@ -1,8 +1,8 @@
 <!--
  * @Date: 2020-06-17 00:17:38
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2020-06-17 01:11:52
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-08-03 14:41:48
  * @Description: 
  * @FilePath: \code-fe\src\components\Odometer\index.vue
 --> 
@@ -14,7 +14,7 @@
 const Odometer = require('./lib/odometer')
 
 export default {
-  name: 'Odometer',
+  name: 'OdometerComp',
   props: {
     num: {
       type: [String, Number],

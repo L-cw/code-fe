@@ -1,8 +1,8 @@
 <!--
  * @Date: 2020-06-17 01:41:24
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2020-08-01 00:14:30
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-08-03 15:30:45
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\layout.vue
 --> 
@@ -21,7 +21,7 @@
             </template>
             <el-menu-item index="/components/odometer">数字动效</el-menu-item>
             <el-menu-item index="/components/seal">公章</el-menu-item>
-            <el-menu-item index="/components/codeBlock">代码块</el-menu-item>
+            <el-menu-item index="/components/code-block">代码块</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
