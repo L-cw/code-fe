@@ -1,7 +1,7 @@
 <!--
  * @Author: Leo
  * @Date: 2020-06-16 23:51:02
- * @LastEditTime: 2020-08-03 15:18:05
+ * @LastEditTime: 2020-08-03 16:22:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \code-fe\src\views\layout\Header.vue
@@ -69,6 +69,7 @@ export default {
     height: $header-height;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
     z-index: $header-zindex;
+    background-color: #fff;
     .header-cont {
       display: flex;
       padding-right: 60px;
