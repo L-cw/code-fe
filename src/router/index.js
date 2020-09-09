@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { componentsRoutes } from './modules/components'
 import { toolsRoutes } from './modules/tools'
+import { demoRoutes } from './modules/demo'
 
 Vue.use(VueRouter)
 
@@ -21,7 +22,9 @@ const routes = [
 
       ...componentsRoutes,
 
-      ...toolsRoutes
+      ...toolsRoutes,
+
+      ...demoRoutes
     ]
   },
   {
