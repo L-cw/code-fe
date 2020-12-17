@@ -2,9 +2,9 @@
  * @Date: 2020-06-17 01:14:57
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-21 12:30:06
+ * @LastEditTime: 2020-12-18 00:42:58
  * @Description: Do not edit
- * @FilePath: \code-fe\src\views\layout\index.vue
+ * @FilePath: \toolkitg:\workspace-self\code-fe\src\views\layout\index.vue
 --> 
 <template>
   <div class="page">
@@ -41,5 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .page {
+    min-width: $type-area;
+  }
 </style>

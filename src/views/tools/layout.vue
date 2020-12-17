@@ -2,9 +2,9 @@
  * @Date: 2020-06-25 22:31:43
  * @Author: Leo
  * @LastEditors: Leo
- * @LastEditTime: 2020-06-25 22:56:31
+ * @LastEditTime: 2020-12-18 00:50:38
  * @Description: Do not edit
- * @FilePath: \code-fe\src\views\tools\layout.vue
+ * @FilePath: \toolkitg:\workspace-self\code-fe\src\views\tools\layout.vue
 --> 
 <template>
   <div class="tools-page">
@@ -22,6 +22,14 @@
             </el-menu-item>
             <el-menu-item index="1-2">
               <router-link to="/tools/pic/solid-color-text">纯色带文字图片</router-link>
+            </el-menu-item>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <span>资源</span>
+            </template>
+            <el-menu-item index="2-1">
+              <router-link to="/tools/resources/mini-app">小程序球友群</router-link>
             </el-menu-item>
           </el-submenu>
         </el-menu>

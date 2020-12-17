@@ -22,6 +22,12 @@ export const toolsRoutes = [
         component: resolve => {
           require(['@/views/tools/solidColorText.vue'], resolve)
         }
+      },
+      {
+        path: 'resources/mini-app',
+        component: resolve => {
+          require(['@/views/tools/resources/miniApp.vue'], resolve)
+        }
       }
     ]
   }

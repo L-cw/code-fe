@@ -4,7 +4,7 @@
     <div class="box-wrapper setting-bar">
       <div class="box-wrapper-title">配置栏</div>
       <el-row :gutter="20" type="flex" align="middle" class="setting-cont">
-        <el-col :span="6" class="flex-center-all">
+        <el-col :span="6" class="flex-center">
           <div class="setting-label">选择颜色</div>
           <el-color-picker
             v-model="color"
@@ -14,7 +14,7 @@
             @change="handleColorChange"
           />
         </el-col>
-        <el-col :span="18" class="flex-center-all">
+        <el-col :span="18" class="flex-center">
           <div class="setting-label">输出尺寸</div>
           <el-input
             v-model="sizeWith"
@@ -33,11 +33,11 @@
             <template slot="append">px</template>
           </el-input>
         </el-col>
-        <el-col :span="6" class="flex-center-all">
+        <el-col :span="6" class="flex-center">
           <div class="setting-label">圆角大小</div>
           <el-input v-model="borderRadius" disabled placeholder="宽" />
         </el-col>
-        <el-col :span="6" class="flex-center-all">
+        <el-col :span="6" class="flex-center">
           <el-checkbox v-model="transparentFlag" disabled>背景透明</el-checkbox>
         </el-col>
       </el-row>
