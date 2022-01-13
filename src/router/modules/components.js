@@ -28,6 +28,12 @@ export const componentsRoutes = [
         component: resolve => {
           require(['@/views/components/codeBlock.vue'], resolve)
         }
+      },
+      {
+        path: 'auto-show-tip',
+        component: resolve => {
+          require(['@/views/components/autoShowTip.vue'], resolve)
+        }
       }
     ]
   }

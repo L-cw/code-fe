@@ -5,7 +5,7 @@
  * @LastEditTime: 2020-08-03 15:30:45
  * @Description: Do not edit
  * @FilePath: \code-fe\src\views\components\layout.vue
---> 
+-->
 <template>
   <div class="components-page">
     <el-row class="content">
@@ -22,11 +22,12 @@
             <el-menu-item index="/components/odometer">数字动效</el-menu-item>
             <el-menu-item index="/components/seal">公章</el-menu-item>
             <el-menu-item index="/components/code-block">代码块</el-menu-item>
+            <el-menu-item index="/components/auto-show-tip">自适应tip</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
       <el-col :span="20" class="component-wrp">
-        <router-view></router-view>
+        <router-view />
       </el-col>
     </el-row>
   </div>
